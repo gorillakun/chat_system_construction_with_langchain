@@ -1,0 +1,13 @@
+version: '3'
+services:
+  6_chatapp:
+    container_name: 6_chatapp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    init: true
+    command: sleep infinity
+    volumes:
+      - ./src:/app
+    ports:
+      - "8000:8000"  # 適切なポートに変更
